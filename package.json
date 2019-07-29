@@ -1,0 +1,50 @@
+{
+	"name": "@zxteam/cancellation",
+	"version": "6.0.7",
+	"description": "ZXTeam's Cancellation Sources",
+	"author": {
+		"name": "ZXTeam",
+		"email": "pub@zxteam.org",
+		"url": "http://www.zxteam.org"
+	},
+	"contributors": [
+		{
+			"name": "Maxim Anurin",
+			"email": "maxim.anurin@zxteam.org",
+			"url": "http://www.anurin.name"
+		},
+		{
+			"name": "Serhii Zghama",
+			"email": "serhii.zghama@zxteam.org"
+		}
+	],
+	"license": "MIT",
+	"dependencies": {
+		"@zxteam/contract": "^6.0.7",
+		"@zxteam/errors": "^6.0.7"
+	},
+	"devDependencies": {
+		"@types/node": "^11.13.18",
+		"@zxnode/build": "^0.0.34"
+	},
+	"engines": {
+		"node": ">=11"
+	},
+	"keywords": [],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zxteamorg/node.cancellation.git"
+	},
+	"bugs": {
+		"url": "https://github.com/zxteamorg/node.cancellation/issues"
+	},
+	"homepage": "https://github.com/zxteamorg/node.cancellation",
+	"scripts": {
+		"build": "zxbuild clean dist && cp README.md .dist/",
+		"test": "nyc --exclude submodules --exclude test --extension=\".ts\" --reporter=lcov --reporter=text --reporter=text-summary mocha \"test/**/*.test.js\" --recursive --timeout 10000",
+		"test:only": "mocha --require source-map-support/register \"test/**/*.test.js\" --recursive --timeout 10000"
+	},
+	"main": "./src/index.js",
+	"types": "./src/index.d.ts",
+	"private": true
+}

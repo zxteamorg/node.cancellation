@@ -14,13 +14,13 @@ if (PACKAGE_GUARD in G) {
 	G[PACKAGE_GUARD] = packageVersion;
 }
 
-import * as zxteam from "@zxteam/contract";
+import { CancellationToken } from "@zxteam/contract";
 
 export * from "./CancellationTokenSource";
 export * from "./SimpleCancellationTokenSource";
 export * from "./TimeoutCancellationTokenSource";
 
-export const DUMMY_CANCELLATION_TOKEN: zxteam.CancellationToken = Object.freeze({
+export const DUMMY_CANCELLATION_TOKEN: CancellationToken = Object.freeze({
 	get isCancellationRequested(): boolean { return false; },
 	addCancelListener(cb: Function): void {/* Dummy */ },
 	removeCancelListener(cb: Function): void {/* Dummy */ },

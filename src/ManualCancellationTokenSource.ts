@@ -3,7 +3,7 @@ import { AggregateError, CancelledError, wrapErrorIfNeeded } from "@zxteam/error
 
 import { CancellationTokenSource } from "./CancellationTokenSource";
 
-export class SimpleCancellationTokenSource implements CancellationTokenSource {
+export class ManualCancellationTokenSource implements CancellationTokenSource {
 	private readonly _token: zxteam.CancellationToken;
 	private readonly _cancelListeners: Array<Function> = [];
 	private _isCancellationRequested: boolean;

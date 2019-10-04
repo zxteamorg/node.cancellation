@@ -1,6 +1,6 @@
-import { SimpleCancellationTokenSource } from "./SimpleCancellationTokenSource";
+import { ManualCancellationTokenSource } from "./ManualCancellationTokenSource";
 
-export class TimeoutCancellationTokenSource extends SimpleCancellationTokenSource {
+export class TimeoutCancellationTokenSource extends ManualCancellationTokenSource {
 	private _timeoutHandler: any;
 
 	public constructor(timeout: number) {
@@ -20,7 +20,7 @@ export class TimeoutCancellationTokenSource extends SimpleCancellationTokenSourc
 	}
 
 	/**
-	 * After call this method, the instance behaves is as `SimpleCancellationTokenSource`
+	 * After call this method, the instance behaves is as `ManualCancellationTokenSource`
 	 */
 	public stopTimer(): void {
 		if (this._timeoutHandler !== undefined) {

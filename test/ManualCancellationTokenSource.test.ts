@@ -3,14 +3,14 @@ import { AggregateError } from "@zxteam/errors";
 
 import { assert } from "chai";
 
-import { CancellationTokenSource, SimpleCancellationTokenSource } from "../src/index";
+import { CancellationTokenSource, ManualCancellationTokenSource } from "../src/index";
 
-describe("SimpleCancellationTokenSource tests", function () {
+describe("ManualCancellationTokenSource tests", function () {
 	it("Should cancel two listeners", async function () {
 		let cancel1 = false;
 		let cancel2 = false;
 
-		const cts: CancellationTokenSource = new SimpleCancellationTokenSource();
+		const cts: CancellationTokenSource = new ManualCancellationTokenSource();
 
 		const token: zxteam.CancellationToken = cts.token;
 

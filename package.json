@@ -1,6 +1,6 @@
 {
 	"name": "@zxteam/cancellation",
-	"version": "6.0.21",
+	"version": "6.0.22",
 	"description": "ZXTeam's Cancellation Sources",
 	"author": {
 		"name": "ZXTeam",
@@ -20,14 +20,12 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"@zxteam/contract": "^6.0.21",
+		"@zxteam/contract": "^6.0.22",
 		"@zxteam/errors": "^6.0.21"
 	},
 	"devDependencies": {
 		"@types/node": "^11.13.21",
-		"@zxnode/build": "^0.0.34",
-		"i": "^0.3.6",
-		"npm": "^6.11.3"
+		"@zxnode/build": "^0.0.34"
 	},
 	"engines": {
 		"node": ">=11"

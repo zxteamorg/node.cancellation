@@ -16,9 +16,11 @@ if (PACKAGE_GUARD in G) {
 
 import { CancellationToken } from "@zxteam/contract";
 
-export * from "./CancellationTokenSource";
-export * from "./ManualCancellationTokenSource";
-export * from "./TimeoutCancellationTokenSource";
+export { CancellationTokenSource } from "./CancellationTokenSource";
+export { ManualCancellationTokenSource } from "./ManualCancellationTokenSource";
+export { TimeoutCancellationTokenSource } from "./TimeoutCancellationTokenSource";
+
+export { sleep } from "./sleep";
 
 export const DUMMY_CANCELLATION_TOKEN: CancellationToken = Object.freeze({
 	get isCancellationRequested(): boolean { return false; },

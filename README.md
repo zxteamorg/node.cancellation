@@ -11,3 +11,19 @@
 ## Classes
 ### SimpleCancellationTokenSource
 ### TimeoutCancellationTokenSource
+
+## Functions
+### sleep
+```typescript
+await sleep(DUMMY_CANCELLATION_TOKEN, 25); // Suspend execution for 25 milliseconds
+```
+```typescript
+const cancellationTokenSource = new ManualCancellationTokenSource();
+...
+await sleep(cancellationTokenSource.token, 25); // Suspend execution for 25 milliseconds or cancel if cancellationTokenSource activates
+```
+```typescript
+const cancellationTokenSource = new ManualCancellationTokenSource();
+...
+await sleep(cancellationTokenSource.token); // Suspend infinitely while cancellationTokenSource activates
+```

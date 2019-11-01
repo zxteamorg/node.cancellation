@@ -16,6 +16,7 @@ if (PACKAGE_GUARD in G) {
 
 import { CancellationToken } from "@zxteam/contract";
 
+export { AggregatedCancellationToken } from "./AggregatedCancellationToken";
 export { CancellationTokenSource } from "./CancellationTokenSource";
 export { ManualCancellationTokenSource } from "./ManualCancellationTokenSource";
 export { TimeoutCancellationTokenSource } from "./TimeoutCancellationTokenSource";

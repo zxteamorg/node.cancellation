@@ -22,4 +22,18 @@ describe("ManualCancellationTokenSource tests", function () {
 		assert.isTrue(cancel1);
 		assert.isTrue(cancel2);
 	});
+
+	it("Should call cancel callback once", async function () {
+		let cancelCount = 0;
+
+		const cts: CancellationTokenSource = new ManualCancellationTokenSource();
+
+		cts.token.addCancelListener(() => { ++cancelCount; });
+
+		cts.cancel();
+		cts.cancel();
+
+		assert.equal(cancelCount, 1, "Cancel callback should call once");
+	});
+
 });

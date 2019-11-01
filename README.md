@@ -9,6 +9,19 @@
 ### CancellationTokenSource
 
 ## Classes
+### AggregatedCancellationToken
+Allows to watch several `CancellationToken` as single token.
+```mermaid
+graph LR
+  CancellationToken1(CancellationToken 1)
+  CancellationToken2(CancellationToken 2)
+  CancellationTokenN(CancellationToken N)
+  CancellationToken1 --> AggregatedCancellationToken
+  CancellationToken2 --> AggregatedCancellationToken
+  CancellationTokenN --> AggregatedCancellationToken
+  AggregatedCancellationToken --> Action
+```
+The Action will be cancelled if any of CancellationToken fire to active state.
 ### SimpleCancellationTokenSource
 ### TimeoutCancellationTokenSource
 
